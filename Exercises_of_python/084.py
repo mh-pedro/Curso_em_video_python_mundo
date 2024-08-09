@@ -43,14 +43,14 @@ print('-'*60)
 print(f'The list of large weight are ')
 for p in peoples:
         if p[1] <= avarege_weight:
-            print(f'{p[0]} with {p[1]} Kg.',clend=' ')
+            print(f'{p[0]} with {p[1]} Kg.',end=' ')
 print()
 print('-'*60)
 print(f'The list of less weight are ')
 for p in peoples:
         if p[1] > avarege_weight:
             print(f'{p[0]} with {p[1]} Kg.',end=' ')
-
+        print()
 print('='*60)
 
 
