@@ -22,5 +22,5 @@ if person['WW'] != 0:
 print('='*50)
 
 for k, v in person.items():
-    print(f'{k} has the value {v}.')
+    print(f' - {k} has the value {v}.')
 print('='*50)

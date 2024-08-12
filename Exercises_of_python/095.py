@@ -1,4 +1,5 @@
-# Enhance the chalenge 093 that then works with many players. Add a visulation system that explit the use of each player
+# Enhance the chalenge 093 that then works with many players. Add a visulation system that explit 
+# the use of each player
 
 
 print('='*50)
@@ -14,7 +15,7 @@ while True:
     player['games'] = int(input(f"How munch games {player['name']} played? "))
 
     for i in range(0,player['games']):
-        gol = int(input(f"How many goals in game{i+1}: "))
+        gol = int(input(f"How many goals in game {i+1}: "))
         gols.append(gol)
 
     player['gols'] = gols[:]
@@ -23,7 +24,7 @@ while True:
     player.clear()
     gols.clear()
 
-    ans = str(input('Do you want add other player?[Y/N] ')).strip().lower()[0]
+    ans = str(input('Do you want add other player?[Y/N]: ')).strip().lower()[0]
     if ans in 'Nn':
         break
     
@@ -34,3 +35,13 @@ print('-'*50)
 for idx, player in enumerate(players):
     print(f"{idx:<5}{player['name']:<15}{str(player['gols']):<20}{player['total_gols']:<5}")
 print('-'*50)
+while True:
+    show_player = int(input("Show which player's data? (999 to stop): "))
+    if show_player == 999:
+        break
+    else:
+        print(f"The data for {players[show_player]['name'].upper()}:")
+        for p, v in enumerate(players[show_player]['gols']):
+            print(f'No game {p+1} he made {v} gols.')
+        print('-'*50)
+print('Thanks!!')

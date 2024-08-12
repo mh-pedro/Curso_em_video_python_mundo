@@ -11,16 +11,16 @@ gols = list()
 player['name'] = str(input('Name of football player: '))
 player['games'] = int(input(f"How munch games {player['name']} played? "))
 for i in range(0,player['games']):
-    gol = int(input(f"How munc gols in the game{i}: "))
+    gol = int(input(f"How munc gols in the game {i}: "))
     gols.append(gol)
 player['gols'] = gols
 player['total_gols'] = sum(gols)
 print('='*50)
 for k, v in player.items():
-    print(f"The fild {k} has the value {v}.")
+    print(f"The fild {k.upper()} has the value {v}.")
 print('='*50)
 print(f"The player {player['name']} played {player['games']} match.")
 for p, v in enumerate(player['gols']):  
-    print(f"=> In the game {p}, he made {player['gols'][v]} gols.")
+    print(f"    => In the game {p}, he made {player['gols'][v]} gols.")
 print(f"The total gols are {player['total_gols']}")
 print('='*50)

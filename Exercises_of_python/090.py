@@ -5,14 +5,17 @@ student = dict()
 print('='*40)
 print('Avarege Grade'.center(40))
 print('='*40)
+
 student['name'] = str(input('Nome: '))
 student['grade'] = float(input(f"The Avarege grade of {student['name']}: "))
 
-print(f"The name is equal to {student['name']}.")
-print(f"The avarege grade is equal to {student['grade']}.")
 if student['grade'] < 7:
-    print('The student is rejected.')
+    student['situation'] = 'Rejected'
 else:
-    print('The student is approved.')
+    student['situation'] = 'Approved'
+print('-'*40)
+
+for k, v in student.items():
+    print(f'- The {k} is equal to {v}')
 print('='*40)
 
